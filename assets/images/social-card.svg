@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Alex Chen academic homepage</title>
+  <desc id="desc">Social preview card for a fictional researcher and developer.</desc>
+  <rect width="1200" height="630" fill="#f7f5ef"/>
+  <path d="M0 520c210-90 385-80 558 8 173 89 390 84 642-15v117H0z" fill="#e8e1d5"/>
+  <circle cx="1000" cy="112" r="54" fill="#d49a61"/>
+  <circle cx="1060" cy="178" r="13" fill="#48635a"/>
+  <text x="110" y="190" font-family="Georgia,serif" font-size="80" fill="#1d211f">Alex Chen</text>
+  <text x="110" y="268" font-family="Arial,sans-serif" font-size="32" fill="#a75520">Researcher · Developer</text>
+  <text x="110" y="352" font-family="Arial,sans-serif" font-size="27" fill="#686d69">Reliable AI · Multimodal Learning · Open Science</text>
+  <line x1="110" y1="405" x2="650" y2="405" stroke="#c9c4b8" stroke-width="2"/>
+  <text x="110" y="462" font-family="Arial,sans-serif" font-size="22" fill="#686d69">Academic homepage template</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 256" role="img" aria-label="Research workspace illustration">
+  <rect width="400" height="256" fill="#eef1eb"/>
+  <rect x="38" y="38" width="324" height="180" rx="12" fill="#fffdf8" stroke="#9da79f" stroke-width="2"/>
+  <rect x="58" y="59" width="98" height="139" rx="7" fill="#e6d4bd"/>
+  <circle cx="107" cy="103" r="25" fill="#78978b"/>
+  <path d="M72 172c13-28 57-32 72 0" fill="#49645b"/>
+  <g fill="#bcc5bd"><rect x="181" y="67" width="135" height="9" rx="4"/><rect x="181" y="91" width="104" height="9" rx="4"/><rect x="181" y="133" width="151" height="7" rx="3"/><rect x="181" y="153" width="123" height="7" rx="3"/><rect x="181" y="173" width="143" height="7" rx="3"/></g>
+  <rect x="181" y="108" width="61" height="10" rx="5" fill="#d49a61"/>
+</svg>

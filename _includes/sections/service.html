@@ -1,0 +1,7 @@
+{% assign entries = site.service | sort: 'order' %}
+<section id="{{ include.section.section_id }}" class="content-section compact-section page-section" aria-labelledby="{{ include.section.section_id }}-title">
+  {% include section-heading.html section=include.section index=include.index %}
+  <ul class="simple-list">
+    {% for item in entries %}<li><span class="simple-year">{{ item.year }}</span><span data-lang="en">{{ item.title.en }}</span><span data-lang="zh" hidden>{{ item.title.zh }}</span></li>{% endfor %}
+  </ul>
+</section>

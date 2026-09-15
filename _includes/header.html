@@ -1,0 +1,57 @@
+{% assign profile = site.profile | first %}
+{% assign sections = site.sections | sort: 'order' %}
+<header class="site-header" data-site-header>
+  <div class="header-inner">
+    <a class="site-mark" href="#about" aria-label="Back to introduction">{{ profile.initials }}</a>
+
+    <nav class="desktop-nav" aria-label="Page sections">
+      <a href="#about"><span data-lang="en">About</span><span data-lang="zh" hidden>简介</span></a>
+      {% for section in sections %}
+        {% if section.enabled %}
+          <a href="#{{ section.section_id }}">
+            <span data-lang="en">{{ section.nav.en }}</span>
+            <span data-lang="zh" hidden>{{ section.nav.zh }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+
+    <div class="header-actions">
+      <details class="directory-menu control-menu">
+        <summary aria-label="Open section directory">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <span data-lang="en">Sections</span><span data-lang="zh" hidden>目录</span>
+        </summary>
+        <div class="control-panel directory-panel">
+          <a href="#about"><span data-lang="en">About</span><span data-lang="zh" hidden>简介</span></a>
+          {% for section in sections %}
+            {% if section.enabled %}
+              <a href="#{{ section.section_id }}">
+                <span data-lang="en">{{ section.nav.en }}</span>
+                <span data-lang="zh" hidden>{{ section.nav.zh }}</span>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </details>
+
+      <button class="icon-control language-toggle" type="button" data-language-toggle aria-label="Switch to Chinese">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h10M9 3v2m1.5 0c-.8 4.2-3 7.2-6.5 9m2-5c1.6 2.2 3.5 3.8 6 5M14 19l4-10 4 10m-6.7-3h5.4"/></svg>
+        <span data-language-label>中文</span>
+      </button>
+
+      <details class="theme-menu control-menu">
+        <summary aria-label="Choose color mode">
+          <svg class="theme-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6 7 7m10 10 1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+          <span data-theme-label data-lang="en">Auto</span>
+          <span data-theme-label data-lang="zh" hidden>自动</span>
+        </summary>
+        <div class="control-panel theme-panel" role="group" aria-label="Color mode">
+          <button type="button" data-theme-value="system"><span data-lang="en">Auto</span><span data-lang="zh" hidden>跟随系统</span></button>
+          <button type="button" data-theme-value="light"><span data-lang="en">Light</span><span data-lang="zh" hidden>浅色</span></button>
+          <button type="button" data-theme-value="dark"><span data-lang="en">Dark</span><span data-lang="zh" hidden>深色</span></button>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>

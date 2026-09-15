@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 260" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract illustrated portrait</title>
+  <desc id="desc">A warm geometric portrait used as sample profile artwork.</desc>
+  <rect width="224" height="260" rx="18" fill="#e9ddcb"/>
+  <circle cx="178" cy="50" r="29" fill="#dca563"/>
+  <circle cx="42" cy="48" r="7" fill="#49645b"/>
+  <path d="M0 202c33-26 72-38 116-34 44 4 80 25 108 55v37H0z" fill="#78978b"/>
+  <path d="M56 260c3-53 25-81 58-81s56 28 60 81z" fill="#223b3b"/>
+  <path d="M94 146h39v43c-8 9-32 9-39 0z" fill="#b8764e"/>
+  <ellipse cx="113" cy="111" rx="48" ry="58" fill="#c9875b"/>
+  <path d="M65 105c0-53 21-77 54-77 34 0 50 24 45 74-16-12-30-28-36-45-8 23-33 38-63 48z" fill="#202c31"/>
+  <circle cx="96" cy="112" r="3.2" fill="#2b2927"/>
+  <circle cx="132" cy="112" r="3.2" fill="#2b2927"/>
+  <path d="M102 137c8 6 17 6 25 0" fill="none" stroke="#74442f" stroke-width="3" stroke-linecap="round"/>
+</svg>

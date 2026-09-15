@@ -1,0 +1,34 @@
+{% assign publications = site.publications | sort: 'order' %}
+<section id="{{ include.section.section_id }}" class="content-section page-section" aria-labelledby="{{ include.section.section_id }}-title">
+  {% include section-heading.html section=include.section index=include.index %}
+  <div class="filter-bar" aria-label="Filter publications">
+    {% for filter in include.section.filters %}
+      <button type="button" class="filter-button{% if filter.id == 'all' %} is-active{% endif %}" data-publication-filter="{{ filter.id }}">
+        <span data-lang="en">{{ filter.en }}</span><span data-lang="zh" hidden>{{ filter.zh }}</span>
+        <span class="filter-count" data-filter-count="{{ filter.id }}"></span>
+      </button>
+    {% endfor %}
+  </div>
+  <div class="publication-list">
+    {% for publication in publications %}
+      <article class="publication-card{% if publication.featured %} is-featured{% endif %}" data-publication data-tags="{{ publication.tags | join: ',' }}">
+        <div class="publication-visual">
+          <img src="{{ publication.image | relative_url }}" width="200" height="132" loading="lazy" alt="Diagram for {{ publication.title }}">
+        </div>
+        <div class="publication-copy">
+          <div class="publication-meta">
+            <span>{{ publication.venue_short }}</span>
+            <span class="status"><span data-lang="en">{{ publication.status.en }}</span><span data-lang="zh" hidden>{{ publication.status.zh }}</span></span>
+          </div>
+          <h3>{{ publication.title }}</h3>
+          <p class="authors">{{ publication.authors }}</p>
+          <p class="publication-summary"><span data-lang="en">{{ publication.summary.en }}</span><span data-lang="zh" hidden>{{ publication.summary.zh }}</span></p>
+          <ul class="resource-links" aria-label="Publication resources">
+            {% for link in publication.links %}<li><a href="{{ link.url }}">{{ link.label }} <span aria-hidden="true">↗</span></a></li>{% endfor %}
+          </ul>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  <p class="empty-state" data-publication-empty hidden><span data-lang="en">No publications match this filter.</span><span data-lang="zh" hidden>没有符合此筛选条件的论文。</span></p>
+</section>

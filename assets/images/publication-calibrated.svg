@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 256" role="img" aria-label="Calibration chart illustration">
+  <rect width="400" height="256" fill="#f6f0e7"/>
+  <path d="M55 205V48m0 157h292" stroke="#9aa29c" stroke-width="2"/>
+  <path d="m59 198 280-138" stroke="#c6b19b" stroke-width="3" stroke-dasharray="8 8"/>
+  <path d="M60 191c50-4 78-46 117-48 52-3 63-44 100-48 33-4 45-28 64-34" fill="none" stroke="#a75520" stroke-width="6" stroke-linecap="round"/>
+  <g fill="#1e3d3a"><circle cx="96" cy="175" r="7"/><circle cx="177" cy="143" r="7"/><circle cx="244" cy="111" r="7"/><circle cx="309" cy="77" r="7"/></g>
+  <text x="65" y="36" font-family="Arial,sans-serif" font-size="15" fill="#58635d">confidence calibration</text>
+</svg>

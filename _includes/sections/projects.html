@@ -1,0 +1,15 @@
+{% assign projects = site.projects | sort: 'order' %}
+<section id="{{ include.section.section_id }}" class="content-section page-section" aria-labelledby="{{ include.section.section_id }}-title">
+  {% include section-heading.html section=include.section index=include.index %}
+  <div class="project-grid">
+    {% for project in projects %}
+      <article class="project-card">
+        <div class="project-number" aria-hidden="true">0{{ forloop.index }}</div>
+        <h3>{{ project.title }}</h3>
+        <p><span data-lang="en">{{ project.description.en }}</span><span data-lang="zh" hidden>{{ project.description.zh }}</span></p>
+        <ul class="tag-list" aria-label="Technologies">{% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+        <ul class="resource-links" aria-label="Project resources">{% for link in project.links %}<li><a href="{{ link.url }}">{{ link.label }} <span aria-hidden="true">↗</span></a></li>{% endfor %}</ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>

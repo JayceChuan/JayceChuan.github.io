@@ -1,0 +1,45 @@
+{% assign profile = site.profile | first %}
+{% assign canonical_url = '/' | absolute_url %}
+{% assign social_image = profile.social_image | absolute_url %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.title }}</title>
+<meta name="description" content="{{ site.description | escape }}">
+<meta name="author" content="{{ profile.name.en | escape }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f5ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111513" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="{{ canonical_url }}">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{ site.title | escape }}">
+<meta property="og:description" content="{{ site.description | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ social_image }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.title | escape }}">
+<meta name="twitter:description" content="{{ site.description | escape }}">
+<meta name="twitter:image" content="{{ social_image }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ profile.name.en | jsonify }},
+  "alternateName": {{ profile.name.zh | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "image": {{ social_image | jsonify }},
+  "jobTitle": {{ profile.job_title.en | jsonify }},
+  "affiliation": {
+    "@type": "Organization",
+    "name": {{ profile.affiliation.en | jsonify }},
+    "url": {{ profile.affiliation_url | jsonify }}
+  },
+  "alumniOf": {{ profile.alumni_of | jsonify }},
+  "knowsAbout": {{ profile.knows_about | jsonify }},
+  "sameAs": {{ profile.same_as | jsonify }}
+}
+</script>

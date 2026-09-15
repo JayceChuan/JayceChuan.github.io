@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sample institute mark">
+  <rect width="64" height="64" rx="13" fill="#1e3d3a"/>
+  <path d="M13 27 32 15l19 12-19 11z" fill="#f0c180"/>
+  <path d="M20 33v13m8-10v10m8-10v10m8-13v13M15 49h34" stroke="#f7f5ef" stroke-width="3" stroke-linecap="round"/>
+</svg>

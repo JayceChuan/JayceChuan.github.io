@@ -1,0 +1,36 @@
+title: Alex Chen | Academic & Developer
+description: Researcher and software developer working on reliable AI systems, scientific computing, and open tools.
+url: https://jaycechuan.github.io
+baseurl: /iHomepage
+lang: en
+timezone: Asia/Shanghai
+
+collections:
+  profile:
+    output: false
+  sections:
+    output: false
+  news:
+    output: false
+  publications:
+    output: false
+  experiences:
+    output: false
+  projects:
+    output: false
+  service:
+    output: false
+  awards:
+    output: false
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

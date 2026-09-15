@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}" data-theme="system">
+  <head>
+    {% include seo.html %}
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/avatar.svg' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('homepage-theme');
+          document.documentElement.dataset.theme = /^(light|dark)$/.test(saved) ? saved : 'system';
+        } catch (_) {}
+      }());
+    </script>
+  </head>
+  {% assign profile = site.profile | first %}
+  <body
+    data-title-en="{{ profile.seo.title.en | escape }}"
+    data-title-zh="{{ profile.seo.title.zh | escape }}"
+    data-description-en="{{ profile.seo.description.en | escape }}"
+    data-description-zh="{{ profile.seo.description.zh | escape }}">
+    <a class="skip-link" href="#main-content">
+      <span data-lang="en">Skip to content</span>
+      <span data-lang="zh" hidden>跳到正文</span>
+    </a>
+    {% include header.html %}
+    <main id="main-content" class="page-shell">{{ content }}</main>
+    {% include footer.html %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  </body>
+</html>

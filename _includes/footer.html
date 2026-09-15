@@ -1,0 +1,8 @@
+{% assign profile = site.profile | first %}
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© {{ 'now' | date: '%Y' }} {{ profile.name.en }}</p>
+    <p><span data-lang="en">Built with Markdown and GitHub Pages.</span><span data-lang="zh" hidden>使用 Markdown 与 GitHub Pages 构建。</span></p>
+    <a href="#about"><span data-lang="en">Back to top ↑</span><span data-lang="zh" hidden>返回顶部 ↑</span></a>
+  </div>
+</footer>
