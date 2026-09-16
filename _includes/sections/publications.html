@@ -8,7 +8,9 @@
         <div class="entry-copy">
           <h3>{{ publication.title }}</h3>
           <p class="authors">{{ publication.authors }}</p>
-          <p class="entry-detail">{{ publication.venue }} · {{ publication.venue_short }} · <span data-lang="en">{{ publication.status.en }}</span><span data-lang="zh" hidden>{{ publication.status.zh }}</span></p>
+          <p class="entry-detail">
+            {{ publication.venue }}{% if publication.venue_short %} · {{ publication.venue_short }}{% endif %}{% if publication.status %} · <span data-lang="en">{{ publication.status.en }}</span><span data-lang="zh" hidden>{{ publication.status.zh }}</span>{% endif %}
+          </p>
         </div>
         <div class="entry-actions">
           <ul class="resource-links" aria-label="Publication resources">
