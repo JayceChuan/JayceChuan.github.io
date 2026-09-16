@@ -10,6 +10,9 @@ organization:
 role:
   en: Master of Engineering in Electronic Information and Communications
   zh: 电子信息与通信工程硕士
+supervisor:
+  en: Supervised by Associate Professor Rong Jin
+  zh: 导师：靳榕 副教授
 details:
   - label:
       en: GPA

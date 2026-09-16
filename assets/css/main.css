@@ -531,6 +531,13 @@ a {
   font-size: 13px;
 }
 
+.timeline-supervisor {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
 .entry-detail {
   margin: 6px 0 0;
   color: var(--faint);

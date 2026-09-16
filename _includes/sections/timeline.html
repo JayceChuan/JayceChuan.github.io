@@ -14,6 +14,9 @@
           </div>
           <h3><a href="{{ item.link }}"><span data-lang="en">{{ item.organization.en }}</span><span data-lang="zh" hidden>{{ item.organization.zh }}</span></a></h3>
           <p class="timeline-role"><span data-lang="en">{{ item.role.en }}</span><span data-lang="zh" hidden>{{ item.role.zh }}</span></p>
+          {% if item.supervisor %}
+            <p class="timeline-supervisor"><span data-lang="en">{{ item.supervisor.en }}</span><span data-lang="zh" hidden>{{ item.supervisor.zh }}</span></p>
+          {% endif %}
           {% if item.description %}
             <p class="timeline-description"><span data-lang="en">{{ item.description.en }}</span><span data-lang="zh" hidden>{{ item.description.zh }}</span></p>
           {% endif %}
