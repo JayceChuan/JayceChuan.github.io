@@ -6,10 +6,27 @@
       <article class="timeline-item">
         <div class="organization-mark"><img src="{{ item.logo | relative_url }}" width="56" height="56" loading="lazy" alt=""></div>
         <div>
-          <p class="timeline-period">{{ item.period }}</p>
+          <div class="timeline-meta">
+            <p class="timeline-period">{{ item.period }}</p>
+            {% if item.location %}
+              <p class="timeline-location"><span data-lang="en">{{ item.location.en }}</span><span data-lang="zh" hidden>{{ item.location.zh }}</span></p>
+            {% endif %}
+          </div>
           <h3><a href="{{ item.link }}"><span data-lang="en">{{ item.organization.en }}</span><span data-lang="zh" hidden>{{ item.organization.zh }}</span></a></h3>
           <p class="timeline-role"><span data-lang="en">{{ item.role.en }}</span><span data-lang="zh" hidden>{{ item.role.zh }}</span></p>
-          <p><span data-lang="en">{{ item.description.en }}</span><span data-lang="zh" hidden>{{ item.description.zh }}</span></p>
+          {% if item.description %}
+            <p class="timeline-description"><span data-lang="en">{{ item.description.en }}</span><span data-lang="zh" hidden>{{ item.description.zh }}</span></p>
+          {% endif %}
+          {% if item.details %}
+            <ul class="timeline-details">
+              {% for detail in item.details %}
+                <li>
+                  <strong><span data-lang="en">{{ detail.label.en }}</span><span data-lang="zh" hidden>{{ detail.label.zh }}</span>:</strong>
+                  <span data-lang="en">{{ detail.value.en }}</span><span data-lang="zh" hidden>{{ detail.value.zh }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
       </article>
     {% endfor %}

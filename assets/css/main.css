@@ -583,7 +583,22 @@ a {
 }
 
 .timeline-period {
-  margin: 0 0 3px;
+  margin: 0;
+}
+
+.timeline-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 3px;
+}
+
+.timeline-location {
+  margin: 0;
+  color: var(--faint);
+  font-size: 12px;
+  font-weight: 650;
 }
 
 .timeline-item h3 a {
@@ -591,11 +606,43 @@ a {
   text-decoration: none;
 }
 
-.timeline-item > div > p:last-child {
+.timeline-description {
   max-width: 720px;
   margin: 9px 0 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.timeline-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 22px;
+  margin: 12px 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 13px;
+  list-style: none;
+}
+
+.timeline-details li {
+  position: relative;
+  padding-left: 12px;
+}
+
+.timeline-details li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline-details strong {
+  color: var(--text);
+  font-weight: 700;
 }
 
 .project-showcase-list {
@@ -904,6 +951,12 @@ a {
   .timeline-item {
     grid-template-columns: 48px minmax(0, 1fr);
     gap: 14px;
+  }
+
+  .timeline-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
   }
 
   .organization-mark {
