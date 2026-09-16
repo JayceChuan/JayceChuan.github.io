@@ -28,8 +28,15 @@ language switch never opens another page.
 
 ## Preview
 
-GitHub Pages builds the site automatically after a push. A local Jekyll install
-is optional and is intentionally not required by the current development setup.
+Install the project gems once, then start the local preview server:
+
+```powershell
+bundle install
+bundle exec jekyll serve --livereload
+```
+
+Open `http://localhost:4000`. GitHub Pages also builds the site automatically
+after a push to the configured publishing branch.
 
 Before publishing, update `url` and `baseurl` in `_config.yml` if the repository
 name or Pages address changes.

@@ -4,7 +4,7 @@ featured: false
 tags:
   - reliable-ai
   - systems
-title: DriftWatch: Diagnosing Silent Failure in Deployed Vision Models
+title: "DriftWatch: Diagnosing Silent Failure in Deployed Vision Models"
 authors: Alex Chen, Noor Williams, Elena Rossi
 venue: Conference on Computer Vision and Pattern Recognition
 venue_short: CVPR 2025

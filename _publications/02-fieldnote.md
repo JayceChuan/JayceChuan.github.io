@@ -4,7 +4,7 @@ featured: false
 tags:
   - multimodal
   - systems
-title: FieldNote: A Reproducible Workspace for Multimodal Field Studies
+title: "FieldNote: A Reproducible Workspace for Multimodal Field Studies"
 authors: Priya Nair, Alex Chen, Jonah Bell, Elena Rossi
 venue: ACM Conference on Human Factors in Computing Systems
 venue_short: CHI 2025
