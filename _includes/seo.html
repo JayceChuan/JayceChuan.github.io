@@ -33,11 +33,14 @@
   "url": {{ canonical_url | jsonify }},
   "image": {{ social_image | jsonify }},
   "jobTitle": {{ profile.job_title.en | jsonify }},
+  "description": {{ profile.sidebar_bio.en | jsonify }},
+  {% if profile.affiliation %}
   "affiliation": {
     "@type": "Organization",
     "name": {{ profile.affiliation.en | jsonify }},
     "url": {{ profile.affiliation_url | jsonify }}
   },
+  {% endif %}
   "alumniOf": {{ profile.alumni_of | jsonify }},
   "knowsAbout": {{ profile.knows_about | jsonify }},
   "sameAs": {{ profile.same_as | jsonify }}

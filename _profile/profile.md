@@ -1,33 +1,24 @@
 ---
-initials: AC
+initials: CJ
 name:
-  en: Alex Chen
-  zh: 陈亚历
+  en: Chuan Jiang
+  zh: 姜川
+sidebar_name:
+  en: Chuan Jiang
+  zh: 姜川
 pronouns: he/him
 job_title:
-  en: Ph.D. Candidate and Research Engineer
-  zh: 博士研究生、研究工程师
-affiliation:
-  en: Horizon Institute of Technology
-  zh: 地平线理工学院
-affiliation_url: https://example.edu
-location:
-  en: Shenzhen, China
-  zh: 中国深圳
-bio:
+  en: Software Engineer | AI, Data & Research
+  zh: 软件工程师 | AI、数据与研究
+# affiliation:
+#   en: Horizon Institute of Technology
+#   zh: 地平线理工学院
+# affiliation_url: https://example.edu
+sidebar_bio:
   en: >-
-    I build reliable AI systems for scientific discovery. My current work sits
-    between multimodal learning, human–AI collaboration, and practical tools
-    that make research easier to reproduce.
+    I build reliable software systems and explore practical applications of AI in research and the real world.
   zh: >-
-    我的研究聚焦面向科学发现的可靠人工智能系统，目前主要探索多模态学习、
-    人机协作，以及提升科研可复现性的实用工具。
-note:
-  en: >-
-    I enjoy turning research prototypes into small, useful open-source systems
-    and writing about the decisions behind them.
-  zh: >-
-    我喜欢把研究原型做成小而实用的开源系统，也会记录设计和工程决策背后的思考。
+    我构建可靠的软件系统，并探索人工智能在科研与真实世界问题中的实际应用。
 email: alex.chen@example.com
 avatar: /assets/images/avatar.svg
 social_image: /assets/images/social-card.png
@@ -60,9 +51,9 @@ same_as:
   - https://orcid.org/
 seo:
   title:
-    en: Alex Chen | Academic & Developer
-    zh: 陈亚历｜研究人员与开发者
+    en: Chuan Jiang | Software Engineer & AI Researcher
+    zh: 姜川｜软件工程师与人工智能研究者
   description:
-    en: Researcher and developer working on reliable AI, multimodal learning, and open scientific tools.
-    zh: 研究可靠人工智能、多模态学习与开放科学工具的研究人员和开发者。
+    en: Software engineer exploring human-centered AI, multimodal learning, computer vision, and AI for science.
+    zh: 关注以人为中心的人工智能、多模态学习、计算机视觉与科学智能的软件工程师。
 ---

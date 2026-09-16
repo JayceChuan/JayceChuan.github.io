@@ -1,5 +1,6 @@
 ---
 order: 20
+year: "2025"
 featured: false
 tags:
   - multimodal

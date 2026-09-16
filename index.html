@@ -2,21 +2,26 @@
 layout: default
 ---
 {% assign profile = site.profile | first %}
-{% include profile.html profile=profile %}
+<div class="content-layout">
+  {% include profile.html profile=profile %}
 
-{% assign sections = site.sections | sort: 'order' %}
-{% assign visible_index = 0 %}
-{% for section in sections %}
-  {% if section.enabled %}
-    {% assign visible_index = visible_index | plus: 1 %}
-    {% capture section_index %}0{{ visible_index }}{% endcapture %}
-    {% case section.component %}
-      {% when 'news' %}{% include sections/news.html section=section index=section_index %}
-      {% when 'publications' %}{% include sections/publications.html section=section index=section_index %}
-      {% when 'experience' %}{% include sections/experience.html section=section index=section_index %}
-      {% when 'projects' %}{% include sections/projects.html section=section index=section_index %}
-      {% when 'service' %}{% include sections/service.html section=section index=section_index %}
-      {% when 'awards' %}{% include sections/awards.html section=section index=section_index %}
-    {% endcase %}
-  {% endif %}
-{% endfor %}
+  <div class="main-column">
+    {% assign sections = site.sections | sort: 'order' %}
+    {% assign visible_index = 0 %}
+    {% for section in sections %}
+      {% if section.enabled %}
+        {% assign visible_index = visible_index | plus: 1 %}
+        {% capture section_index %}0{{ visible_index }}{% endcapture %}
+        {% case section.component %}
+          {% when 'short-bio' %}{% include sections/short-bio.html section=section index=section_index %}
+          {% when 'education' %}{% include sections/timeline.html section=section index=section_index entries=site.education %}
+          {% when 'publications' %}{% include sections/publications.html section=section index=section_index %}
+          {% when 'working-experiences' %}{% include sections/timeline.html section=section index=section_index entries=site.experiences %}
+          {% when 'projects' %}{% include sections/projects.html section=section index=section_index %}
+          {% when 'prototypes' %}{% include sections/prototypes.html section=section index=section_index %}
+          {% when 'awards' %}{% include sections/awards.html section=section index=section_index %}
+        {% endcase %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

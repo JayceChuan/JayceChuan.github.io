@@ -1,6 +1,12 @@
 ---
 order: 20
+year: "2025"
+featured: false
 title: Signal Garden
+image: /assets/images/publication-fieldnote.svg
+status:
+  en: Interactive Demo
+  zh: 交互演示
 tags:
   - TypeScript
   - Visualization

@@ -5,9 +5,11 @@
       <span data-lang="en">{{ include.section.title.en }}</span>
       <span data-lang="zh" hidden>{{ include.section.title.zh }}</span>
     </h2>
-    <p class="section-intro">
-      <span data-lang="en">{{ include.section.intro.en }}</span>
-      <span data-lang="zh" hidden>{{ include.section.intro.zh }}</span>
-    </p>
+    {% if include.section.intro.en or include.section.intro.zh %}
+      <p class="section-intro">
+        <span data-lang="en">{{ include.section.intro.en }}</span>
+        <span data-lang="zh" hidden>{{ include.section.intro.zh }}</span>
+      </p>
+    {% endif %}
   </div>
 </header>

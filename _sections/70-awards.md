@@ -1,7 +1,7 @@
 ---
 section_id: awards
 component: awards
-order: 60
+order: 70
 enabled: true
 title:
   en: Awards & Honors

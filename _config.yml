@@ -1,5 +1,5 @@
-title: Alex Chen | Academic & Developer
-description: Researcher and software developer working on reliable AI systems, scientific computing, and open tools.
+title: Chuan Jiang | Software Engineer & AI Researcher
+description: Software engineer exploring human-centered AI, multimodal learning, computer vision, and AI for science.
 url: https://jaycechuan.github.io
 baseurl: ""
 lang: en
@@ -14,9 +14,13 @@ collections:
     output: false
   publications:
     output: false
+  education:
+    output: false
   experiences:
     output: false
   projects:
+    output: false
+  prototypes:
     output: false
   service:
     output: false

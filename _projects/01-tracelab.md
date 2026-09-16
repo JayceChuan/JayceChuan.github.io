@@ -1,6 +1,12 @@
 ---
 order: 10
+year: "2026"
+featured: true
 title: TraceLab
+image: /assets/images/publication-calibrated.svg
+status:
+  en: Open Source
+  zh: 开源项目
 tags:
   - Python
   - Reproducibility

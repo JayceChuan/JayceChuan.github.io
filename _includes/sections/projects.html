@@ -1,14 +1,22 @@
 {% assign projects = site.projects | sort: 'order' %}
 <section id="{{ include.section.section_id }}" class="content-section page-section" aria-labelledby="{{ include.section.section_id }}-title">
   {% include section-heading.html section=include.section index=include.index %}
-  <div class="project-grid">
+  <div class="project-showcase-list">
     {% for project in projects %}
-      <article class="project-card">
-        <div class="project-number" aria-hidden="true">0{{ forloop.index }}</div>
-        <h3>{{ project.title }}</h3>
-        <p><span data-lang="en">{{ project.description.en }}</span><span data-lang="zh" hidden>{{ project.description.zh }}</span></p>
-        <ul class="tag-list" aria-label="Technologies">{% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
-        <ul class="resource-links" aria-label="Project resources">{% for link in project.links %}<li><a href="{{ link.url }}">{{ link.label }} <span aria-hidden="true">↗</span></a></li>{% endfor %}</ul>
+      <article class="showcase-card{% if project.featured %} is-featured{% endif %}">
+        <div class="showcase-visual">
+          <img src="{{ project.image | relative_url }}" width="200" height="132" loading="lazy" alt="Visual for {{ project.title }}">
+        </div>
+        <div class="showcase-copy">
+          <div class="showcase-meta">
+            <span>{{ project.year }}</span>
+            <span class="status"><span data-lang="en">{{ project.status.en }}</span><span data-lang="zh" hidden>{{ project.status.zh }}</span></span>
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p class="showcase-summary"><span data-lang="en">{{ project.description.en }}</span><span data-lang="zh" hidden>{{ project.description.zh }}</span></p>
+          <ul class="tag-list" aria-label="Technologies">{% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+          <ul class="resource-links" aria-label="Project resources">{% for link in project.links %}<li><a href="{{ link.url }}">{{ link.label }} <span aria-hidden="true">↗</span></a></li>{% endfor %}</ul>
+        </div>
       </article>
     {% endfor %}
   </div>

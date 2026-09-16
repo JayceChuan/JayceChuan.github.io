@@ -1,4 +1,4 @@
-{% assign entries = site.experiences | sort: 'order' %}
+{% assign entries = include.entries | sort: 'order' %}
 <section id="{{ include.section.section_id }}" class="content-section page-section" aria-labelledby="{{ include.section.section_id }}-title">
   {% include section-heading.html section=include.section index=include.index %}
   <div class="timeline-list">
@@ -7,7 +7,7 @@
         <div class="organization-mark"><img src="{{ item.logo | relative_url }}" width="56" height="56" loading="lazy" alt=""></div>
         <div>
           <p class="timeline-period">{{ item.period }}</p>
-          <h3><a href="{{ item.url }}"><span data-lang="en">{{ item.organization.en }}</span><span data-lang="zh" hidden>{{ item.organization.zh }}</span></a></h3>
+          <h3><a href="{{ item.link }}"><span data-lang="en">{{ item.organization.en }}</span><span data-lang="zh" hidden>{{ item.organization.zh }}</span></a></h3>
           <p class="timeline-role"><span data-lang="en">{{ item.role.en }}</span><span data-lang="zh" hidden>{{ item.role.zh }}</span></p>
           <p><span data-lang="en">{{ item.description.en }}</span><span data-lang="zh" hidden>{{ item.description.zh }}</span></p>
         </div>

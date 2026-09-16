@@ -1,5 +1,6 @@
 ---
 order: 30
+year: "2025"
 featured: false
 tags:
   - reliable-ai

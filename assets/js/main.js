@@ -93,34 +93,6 @@
     });
   });
 
-  var publications = Array.from(document.querySelectorAll("[data-publication]"));
-  var filterButtons = document.querySelectorAll("[data-publication-filter]");
-  var emptyState = document.querySelector("[data-publication-empty]");
-
-  filterButtons.forEach(function (button) {
-    var filter = button.dataset.publicationFilter;
-    var count = filter === "all"
-      ? publications.length
-      : publications.filter(function (publication) {
-          return publication.dataset.tags.split(",").includes(filter);
-        }).length;
-    var badge = button.querySelector("[data-filter-count]");
-    if (badge) badge.textContent = count;
-
-    button.addEventListener("click", function () {
-      var visibleCount = 0;
-      filterButtons.forEach(function (item) {
-        item.classList.toggle("is-active", item === button);
-      });
-      publications.forEach(function (publication) {
-        var matches = filter === "all" || publication.dataset.tags.split(",").includes(filter);
-        publication.classList.toggle("is-filtered", !matches);
-        if (matches) visibleCount += 1;
-      });
-      if (emptyState) emptyState.hidden = visibleCount !== 0;
-    });
-  });
-
   var sectionLinks = Array.from(document.querySelectorAll('a[href^="#"]'))
     .filter(function (link) { return link.getAttribute("href").length > 1; });
   var observedSections = Array.from(document.querySelectorAll(".page-section"));

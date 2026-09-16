@@ -1,6 +1,12 @@
 ---
 order: 30
+year: "2025"
+featured: false
 title: PaperTrail
+image: /assets/images/publication-drift.svg
+status:
+  en: Prototype
+  zh: 原型
 tags:
   - Rust
   - Open Science

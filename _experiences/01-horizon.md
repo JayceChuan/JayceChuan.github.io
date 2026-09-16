@@ -1,15 +1,15 @@
 ---
 order: 10
-period: 2024 — Present
+period: 2023 — Present
 organization:
-  en: Horizon Institute of Technology
-  zh: 地平线理工学院
+  en: Horizon Systems
+  zh: 地平线系统
 role:
-  en: Ph.D. Candidate · Intelligent Systems Lab
-  zh: 智能系统实验室 · 博士研究生
+  en: Senior Software Engineer
+  zh: 高级软件工程师
 description:
-  en: Researching reliable multimodal learning with Prof. Elena Rossi and maintaining the lab's reproducibility toolkit.
-  zh: 在 Elena Rossi 教授指导下研究可靠多模态学习，并维护实验室的可复现性工具链。
+  en: Building production software, automation infrastructure, and data services while prototyping AI-assisted engineering workflows.
+  zh: 开发生产级软件、自动化基础设施与数据服务，并探索人工智能辅助的工程工作流。
 logo: /assets/images/institute.svg
-url: https://example.edu
+link: "#"
 ---

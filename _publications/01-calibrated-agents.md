@@ -1,5 +1,6 @@
 ---
 order: 10
+year: "2026"
 featured: true
 tags:
   - reliable-ai

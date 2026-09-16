@@ -2,10 +2,9 @@
 {% assign sections = site.sections | sort: 'order' %}
 <header class="site-header" data-site-header>
   <div class="header-inner">
-    <a class="site-mark" href="#about" aria-label="Back to introduction">{{ profile.initials }}</a>
+    <a class="site-mark" href="#main-content" aria-label="Back to top">{{ profile.initials }}</a>
 
     <nav class="desktop-nav" aria-label="Page sections">
-      <a href="#about"><span data-lang="en">About</span><span data-lang="zh" hidden>简介</span></a>
       {% for section in sections %}
         {% if section.enabled %}
           <a href="#{{ section.section_id }}">
@@ -23,7 +22,6 @@
           <span data-lang="en">Sections</span><span data-lang="zh" hidden>目录</span>
         </summary>
         <div class="control-panel directory-panel">
-          <a href="#about"><span data-lang="en">About</span><span data-lang="zh" hidden>简介</span></a>
           {% for section in sections %}
             {% if section.enabled %}
               <a href="#{{ section.section_id }}">

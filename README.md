@@ -13,14 +13,17 @@ runtime dependencies.
 
 ## Content
 
-- `_profile/profile.md`: identity, biography, links, and structured-person data
+- `_profile/profile.md`: sidebar identity, short biography, links, and structured-person data
 - `_sections/*.md`: section headings, order, visibility, and navigation labels
-- `_news/*.md`: news entries
-- `_publications/*.md`: publication cards
-- `_experiences/*.md`: education and work history
-- `_projects/*.md`: project cards
-- `_service/*.md`: service and teaching entries
+- `_education/*.md`: education timeline entries
+- `_publications/*.md`: compact publication entries
+- `_experiences/*.md`: working experience timeline entries
+- `_projects/*.md`: visual project cards
+- `_prototypes/*.md`: reserved prototype entries
 - `_awards/*.md`: awards
+
+The legacy `_news` and `_service` content is retained but is not rendered by the
+current one-page layout.
 
 Change a section's `order` value to move it everywhere, including the navigation.
 Set `enabled: false` to hide it. English and Chinese copy live together so the

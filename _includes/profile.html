@@ -1,37 +1,5 @@
 {% assign profile = include.profile %}
-<section id="about" class="hero page-section" aria-labelledby="profile-name">
-  <div class="hero-copy">
-    <p class="eyebrow">
-      <span data-lang="en">{{ profile.job_title.en }} · {{ profile.location.en }}</span>
-      <span data-lang="zh" hidden>{{ profile.job_title.zh }} · {{ profile.location.zh }}</span>
-    </p>
-    <h1 id="profile-name">
-      <span>{{ profile.name.en }}</span>
-      <span class="name-divider" aria-hidden="true">/</span>
-      <span lang="zh-CN">{{ profile.name.zh }}</span>
-    </h1>
-    <p class="affiliation">
-      <a href="{{ profile.affiliation_url }}" target="_blank" rel="noopener noreferrer">
-        <span data-lang="en">{{ profile.affiliation.en }}</span>
-        <span data-lang="zh" hidden>{{ profile.affiliation.zh }}</span>
-      </a>
-    </p>
-    <div class="hero-bio">
-      <p data-lang="en">{{ profile.bio.en }}</p>
-      <p data-lang="zh" hidden>{{ profile.bio.zh }}</p>
-      <p data-lang="en">{{ profile.note.en }}</p>
-      <p data-lang="zh" hidden>{{ profile.note.zh }}</p>
-    </div>
-    <ul class="profile-links" aria-label="Profile links">
-      {% for link in profile.links %}
-        <li>
-          <a href="{{ link.url }}"{% if link.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
-            <span class="link-dot" aria-hidden="true"></span>{{ link.label }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+<aside class="profile-sidebar" aria-labelledby="profile-name">
   <div class="portrait-wrap">
     <img class="portrait" src="{{ profile.avatar | relative_url }}" width="224" height="260" alt="Illustrated portrait of {{ profile.name.en }}">
     <p class="portrait-caption">
@@ -39,4 +7,27 @@
       <span data-lang="zh" hidden>研究者 · 开发者</span>
     </p>
   </div>
-</section>
+  <div class="sidebar-introduction">
+    <h1 id="profile-name">
+      <span data-lang="en">{{ profile.sidebar_name.en | default: profile.name.en }}</span>
+      <span data-lang="zh" hidden>{{ profile.sidebar_name.zh | default: profile.name.zh }}</span>
+    </h1>
+    <p class="sidebar-role">
+      <span data-lang="en">{{ profile.job_title.en }}</span>
+      <span data-lang="zh" hidden>{{ profile.job_title.zh }}</span>
+    </p>
+    <p class="sidebar-bio">
+      <span data-lang="en">{{ profile.sidebar_bio.en }}</span>
+      <span data-lang="zh" hidden>{{ profile.sidebar_bio.zh }}</span>
+    </p>
+  </div>
+  <ul class="profile-links" aria-label="Profile links">
+    {% for link in profile.links %}
+      <li>
+        <a href="{{ link.url }}"{% if link.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+          <span class="link-dot" aria-hidden="true"></span>{{ link.label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>

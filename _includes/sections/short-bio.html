@@ -1,0 +1,7 @@
+<section id="{{ include.section.section_id }}" class="content-section short-bio-section page-section" aria-labelledby="{{ include.section.section_id }}-title">
+  {% include section-heading.html section=include.section index=include.index %}
+  <div class="prose-content">
+    <div data-lang="en">{{ include.section.body_copy.en | markdownify }}</div>
+    <div data-lang="zh" hidden>{{ include.section.body_copy.zh | markdownify }}</div>
+  </div>
+</section>
