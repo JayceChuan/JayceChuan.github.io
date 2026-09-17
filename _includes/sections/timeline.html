@@ -12,7 +12,13 @@
               <p class="timeline-location"><span data-lang="en">{{ item.location.en }}</span><span data-lang="zh" hidden>{{ item.location.zh }}</span></p>
             {% endif %}
           </div>
-          <h3><a href="{{ item.link }}"><span data-lang="en">{{ item.organization.en }}</span><span data-lang="zh" hidden>{{ item.organization.zh }}</span></a></h3>
+          <h3>
+            {% if item.link %}
+              <a href="{{ item.link }}"><span data-lang="en">{{ item.organization.en }}</span><span data-lang="zh" hidden>{{ item.organization.zh }}</span></a>
+            {% else %}
+              <span data-lang="en">{{ item.organization.en }}</span><span data-lang="zh" hidden>{{ item.organization.zh }}</span>
+            {% endif %}
+          </h3>
           <p class="timeline-role"><span data-lang="en">{{ item.role.en }}</span><span data-lang="zh" hidden>{{ item.role.zh }}</span></p>
           {% if item.supervisor %}
             <p class="timeline-supervisor"><span data-lang="en">{{ item.supervisor.en }}</span><span data-lang="zh" hidden>{{ item.supervisor.zh }}</span></p>
@@ -27,6 +33,30 @@
                   <strong><span data-lang="en">{{ detail.label.en }}</span><span data-lang="zh" hidden>{{ detail.label.zh }}</span>:</strong>
                   <span data-lang="en">{{ detail.value.en }}</span><span data-lang="zh" hidden>{{ detail.value.zh }}</span>
                 </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if item.projects %}
+            <div class="experience-project-list">
+              {% for project in item.projects %}
+                <section class="experience-project">
+                  <div class="experience-project-meta">
+                    <h4><span data-lang="en">{{ project.title.en }}</span><span data-lang="zh" hidden>{{ project.title.zh }}</span></h4>
+                    <p>{{ project.period }}</p>
+                  </div>
+                  <ul class="experience-highlights">
+                    {% for highlight in project.highlights %}
+                      <li><span data-lang="en">{{ highlight.en }}</span><span data-lang="zh" hidden>{{ highlight.zh }}</span></li>
+                    {% endfor %}
+                  </ul>
+                </section>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if item.highlights %}
+            <ul class="experience-highlights">
+              {% for highlight in item.highlights %}
+                <li><span data-lang="en">{{ highlight.en }}</span><span data-lang="zh" hidden>{{ highlight.zh }}</span></li>
               {% endfor %}
             </ul>
           {% endif %}

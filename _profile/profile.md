@@ -1,5 +1,5 @@
 ---
-initials: CJ
+initials: JC
 name:
   en: Chuan Jiang
   zh: 姜川
